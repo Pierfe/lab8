@@ -1,0 +1,61 @@
+//ESERCIZIO 5
+    /*
+    char prod[MAX][LEN];
+    float prezzi[MAX];
+    int i;
+    char key[LEN];
+    int qta;
+
+    for(i=0; i<3; i++)
+    {
+        printf("Ins nome e prezzo prodotto %d ", i+1);
+        scanf("%s %f", prod[i], &prezzi[i]); //il nome di matrice è gia un indirizzo il vettore no
+
+    }
+
+    int trovato;
+    float risultato;
+    do{
+            printf("Ins nome e prezzo prodotto %d ", i+1);
+            scanf("%s %d", key, &qta);
+
+            for(i=0; i<MAX && strcmp(key, prod[i])!=0; i++); //il ; è come se ci fosse {}
+
+            if(i<MAX)
+                {
+                trovato =1;
+                risultato= qta * prezzi[i];
+                printf("Risultato: %s %f", prod[i], risultato);
+                }
+                else
+                printf("prodotto on trovato\n");
+
+
+    }while(!trovato);
+
+*/
+
+    char str[MSTR];
+
+//    do{
+//
+//
+//    }while(str[0] != EOF);
+
+
+    gets(str);
+
+    for(i=0; i< strlen(str); i++)
+    {
+        if(tolower(str[i]) =='c' && tolower(str[i+1]) =='h')
+        {
+            str[i]= isupper(str[i]) ? 'K' : 'k'; //if condensato ? -> if   : ->else
+            if(isupper(str[i]))
+                str[i]='K';
+            else(islower(str[i]))
+                str[i]='k';
+
+            for(j=i+1; j<strlen(str);i++)
+                str[j]= str[j+1];
+        }
+    }
